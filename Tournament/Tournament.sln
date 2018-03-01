@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tournament", "Tournament\Tournament.csproj", "{AF0646CE-73FE-463A-AACF-31BBB04FE11A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF0646CE-73FE-463A-AACF-31BBB04FE11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0646CE-73FE-463A-AACF-31BBB04FE11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF0646CE-73FE-463A-AACF-31BBB04FE11A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0646CE-73FE-463A-AACF-31BBB04FE11A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
