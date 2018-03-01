@@ -17,7 +17,7 @@ namespace Tournament.Nodes
             LeafNodeTeam = team;
         }
 
-        public ITeam GetCompeditor(int position)
+        public ITeam GetCompeditor(MatchOutcome position)
         {
             return LeafNodeTeam;
         }

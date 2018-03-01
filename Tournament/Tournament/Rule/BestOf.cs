@@ -1,31 +1,65 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Tournament.Nodes;
+using Tournament.Team;
 
 namespace Tournament.Rule
 {
     public class BestOf : IRule
     {
-        
-        public BestOf()
+        private int BestOfFirstTo;
+        public BestOf( int numberOfGames = 2 )
         {
+            BestOfFirstTo = numberOfGames;
         }
 
         public bool CanGameRun(INode game)
         {
-            int compeditors = game.GetNumberOfCompeditors();
-
-
-            return false;
+            return IsGameFull(game) && !IsGameOver(game);
         }
 
-        public bool IsGameOver()
+        public ITeam GetCompetitorPosition(INode game, int pos)
         {
-            throw new NotImplementedException();
+            ITeam team = DummyTeamCreator.DummyTeamInstance;
+
+            if ( IsGameOver(game) )
+            {
+                List <CompetitorData> temp = ((MatchNode)game).GetBattleResult();
+                temp = temp.OrderByDescending(br => br.GetScore()).ToList();
+                
+                team = temp[pos - 1].GetTeam();
+
+            }
+
+            return team;
         }
 
-        public void SortCompeditors()
-        {
-            throw new NotImplementedException();
+        public bool IsGameFull(INode game )
+        { 
+            int numberofCompetitors = game.GetNumberOfCompeditors();
+
+            return numberofCompetitors == 2; 
+                  
         }
+
+        public bool IsGameOver(INode game)
+        {
+            bool output = false; 
+            List<CompetitorData> compData = ((MatchNode)game).GetBattleResult();
+
+            foreach (var battleData in compData)
+            {
+                if (battleData.GetScore() >= BestOfFirstTo )
+                {
+                    output = true;
+                    break;
+                }
+            }
+
+            return output; 
+        }
+
+
     }
 }

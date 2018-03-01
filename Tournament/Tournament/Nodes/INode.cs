@@ -3,10 +3,18 @@ using Tournament.Team;
 
 namespace Tournament.Nodes
 {
+    public enum MatchOutcome
+    {
+        OneVsOneWinner = 1,
+        OneVsOneLooser = 2
+
+    }
+
+
     public interface INode
     {
         bool IsGameFinnished();
-        ITeam GetCompeditor(int position);
+        ITeam GetCompeditor(MatchOutcome position);
         int GetNumberOfCompeditors();
         void Update();
     }

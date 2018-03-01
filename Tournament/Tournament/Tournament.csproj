@@ -7,8 +7,5 @@
 
   <ItemGroup>
     <Folder Include="OutComponents\" />
-    <Folder Include="Nodes\" />
-    <Folder Include="Team\" />
-    <Folder Include="Rule\" />
   </ItemGroup>
 </Project>

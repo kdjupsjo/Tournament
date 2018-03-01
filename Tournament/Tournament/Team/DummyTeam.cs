@@ -6,6 +6,11 @@ namespace Tournament.Team
         public DummyTeam()
         {
         }
+
+        public string GetTeamName()
+        {
+            return "Dummy Team";
+        }
     }
 
 

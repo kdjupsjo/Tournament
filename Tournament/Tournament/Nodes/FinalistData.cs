@@ -4,20 +4,20 @@ namespace Tournament.Nodes
     public class FinalistData
     {
         private INode FinalistDataNode;
-        private int FinalistDataPosition;
+        private MatchOutcome FinalistDataPosition;
 
         public FinalistData()
         {
             FinalistDataNode = null;
-            FinalistDataPosition = -1;
+            FinalistDataPosition = MatchOutcome.OneVsOneWinner;
         }
 
-        public FinalistData( INode node, int position )
+        public FinalistData( INode node, MatchOutcome position )
         {
             SetFinilist(node, position);
         }
 
-        public void SetFinilist( INode node, int position )
+        public void SetFinilist( INode node, MatchOutcome position )
         {
             FinalistDataNode = node;
             FinalistDataPosition = position;
@@ -28,7 +28,7 @@ namespace Tournament.Nodes
             return FinalistDataNode;
         }
 
-        public int GetPosition()
+        public MatchOutcome GetPosition()
         {
             return FinalistDataPosition;
         }

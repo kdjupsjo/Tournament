@@ -9,7 +9,7 @@ namespace Tournament.Nodes
         {
         }
 
-        public ITeam GetCompeditor(int position)
+        public ITeam GetCompeditor(MatchOutcome position)
         {
             throw new NotImplementedException();
         }
