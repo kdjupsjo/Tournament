@@ -9,5 +9,6 @@ namespace Tournament.Tournament
         void AddLeafNode(LeafNode node);
         void GenerateTournamentTree();
         List<INode> GetActiveTournamnetNodes();
+
     }
 }
