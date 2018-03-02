@@ -25,6 +25,13 @@ namespace Tournament.Nodes
             SetRule(rule);
         }
 
+        public int NumberOfFinalists()
+        {
+            return MatchNodeFinalists.Count;
+        }
+
+
+
         public void GiveTeamOnePoint(ITeam team)
         {
             if (MatchNodeRule.CanGameRun(this))
@@ -76,7 +83,7 @@ namespace Tournament.Nodes
             return MatchNodeBattleResult.Count;
         }
 
-        public bool IsGameFinnished()
+        public bool IsGameFinished()
         {
             return MatchNodeRule.IsGameOver(this);
         }
@@ -94,6 +101,16 @@ namespace Tournament.Nodes
         public void AddFinalist(INode node, MatchOutcome pos)
         {
             MatchNodeFinalists.Add(new FinalistData(node, pos)); 
+        }
+
+        public List<FinalistData> GetFinalists()
+        {
+            return MatchNodeFinalists;
+        }
+
+        public void RemoveFinalist(FinalistData finalist)
+        {
+            MatchNodeFinalists.Remove(finalist);
         }
 
         private bool IsTeamACompetitor(ITeam team)
@@ -144,6 +161,22 @@ namespace Tournament.Nodes
         public bool IsGameActive()
         {
             return MatchNodeRule.CanGameRun(this);
+        }
+
+
+        public int GetNodeDepth()
+        {
+            int depth = 0;
+            if (MatchNodeFinalists.Count > 0)
+            {
+                foreach (FinalistData finalist in MatchNodeFinalists)
+                {
+                    INode node = finalist.GetNode(); 
+                    depth = Math.Max(node.GetNodeDepth() + 1, depth);
+                }
+
+            }
+            return depth;
         }
     }
 }

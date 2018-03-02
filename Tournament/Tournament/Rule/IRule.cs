@@ -7,15 +7,13 @@ namespace Tournament.Rule
     public interface IRule
     {
         /// <summary>
-        /// Determine if a game is able to run by check by doing
-        /// multiple validations.
+        /// Determine if a game is able to run.
         /// </summary>
         /// <param name="game">Game to check</param>
         /// <returns>Return true if the game is ready to run, otherwise returns false.</returns>
         bool CanGameRun(INode game);
         /// <summary>
-        /// Checks if the game is over by comparting teams 
-        /// against the match's max score.
+        /// Checks if the given game is over.
         /// </summary>
         /// <param name="game">Game to check</param>
         /// <returns>Returns true if game score is true, otherwise returns false</returns>

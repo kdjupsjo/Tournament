@@ -41,5 +41,6 @@ namespace Tournament.Nodes
         /// <param name="pos">"Position" of the node/match</param>
         void AddFinalist(INode node, MatchOutcome pos);
         bool IsGameActive();
+        int GetNodeDepth();
     }
 }

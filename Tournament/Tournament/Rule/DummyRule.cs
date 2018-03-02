@@ -15,7 +15,7 @@ namespace Tournament.Rule
 
         public ITeam GetCompetitorPosition(INode game, int pos)
         {
-            throw new NotImplementedException();
+            return DummyTeamCreator.DummyTeamInstance;
         }
 
         public bool IsGameFull(INode game)

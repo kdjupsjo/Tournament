@@ -27,6 +27,11 @@ namespace Tournament.Nodes
             return LeafNodeTeam;
         }
 
+        public int GetNodeDepth()
+        {
+            return 0;
+        }
+
         public int GetNumberOfCompeditors()
         {
             return 1;
@@ -37,7 +42,7 @@ namespace Tournament.Nodes
             return false;
         }
 
-        public bool IsGameFinnished()
+        public bool IsGameFinished()
         {
             return true;
         }

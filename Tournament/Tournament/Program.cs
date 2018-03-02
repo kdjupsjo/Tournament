@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Tournament.Nodes;
 using Tournament.Rule;
 using Tournament.Team;
+using Tournament.Tournament;
 
 namespace Tournament
 {
@@ -17,6 +18,15 @@ namespace Tournament
 
             TestMultiFinalist(nodes);
 
+
+            SingleElimination tournament = new SingleElimination();
+
+            foreach( LeafNode n in nodes)
+            {
+                tournament.AddLeafNode(n);
+            }
+
+            tournament.GenerateTournamentTree();
 
             return;
         }

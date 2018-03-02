@@ -23,6 +23,11 @@ namespace Tournament.Nodes
             return EndNodeTeam;
         }
 
+        public int GetNodeDepth()
+        {
+            return EndNodeFinalist.GetNode().GetNodeDepth() + 1;
+        }
+
         public int GetNumberOfCompeditors()
         {
             return 1;
@@ -33,14 +38,14 @@ namespace Tournament.Nodes
             return false;
         }
 
-        public bool IsGameFinnished()
+        public bool IsGameFinished()
         {
             return EndNodeTeam != DummyTeamCreator.DummyTeamInstance;
         }
 
         public void Update()
         {
-            if ( !IsGameFinnished() )
+            if ( !IsGameFinished() )
             {
                 ITeam team = EndNodeFinalist.GetCompeditor();
 
