@@ -51,6 +51,26 @@ namespace Tournament
             loser = mn.GetCompeditor(MatchOutcome.OneVsOneLooser);
             final.Update();
 
+            EndNode tournamentFirstPlace = new EndNode();
+            EndNode tournamentSecondPlace = new EndNode();
+            EndNode tournamentThirdPlace = new EndNode();
+
+            tournamentFirstPlace.AddFinalist(final, MatchOutcome.OneVsOneWinner);
+            tournamentSecondPlace.AddFinalist(final, MatchOutcome.OneVsOneLooser);
+            tournamentThirdPlace.AddFinalist(mn, MatchOutcome.OneVsOneLooser);
+
+            tournamentFirstPlace.Update();
+            tournamentSecondPlace.Update();
+            tournamentThirdPlace.Update();
+
+            final.GiveTeamOnePoint(winner);
+            final.GiveTeamOnePoint(winner);
+
+            tournamentFirstPlace.Update();
+            tournamentSecondPlace.Update();
+            tournamentThirdPlace.Update();
+
+
             return;
         }
 

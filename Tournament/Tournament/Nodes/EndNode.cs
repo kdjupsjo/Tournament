@@ -5,28 +5,46 @@ namespace Tournament.Nodes
 {
     public class EndNode :INode
     {
+        private ITeam EndNodeTeam;
+        private FinalistData EndNodeFinalist;
+
         public EndNode()
         {
+            EndNodeTeam = DummyTeamCreator.DummyTeamInstance;
+        }
+
+        public void AddFinalist(INode node, MatchOutcome pos)
+        {
+            EndNodeFinalist = new FinalistData(node, pos);
         }
 
         public ITeam GetCompeditor(MatchOutcome position)
         {
-            throw new NotImplementedException();
+            return EndNodeTeam;
         }
 
         public int GetNumberOfCompeditors()
         {
-            throw new NotImplementedException();
+            return 1;
         }
 
         public bool IsGameFinnished()
         {
-            throw new NotImplementedException();
+            return EndNodeTeam != DummyTeamCreator.DummyTeamInstance;
         }
 
         public void Update()
         {
-            throw new NotImplementedException();
+            if ( !IsGameFinnished() )
+            {
+                ITeam team = EndNodeFinalist.GetCompeditor();
+
+                if ( team != DummyTeamCreator.DummyTeamInstance )
+                {
+                    EndNodeTeam = team;
+
+                }
+            }
         }
     }
 }

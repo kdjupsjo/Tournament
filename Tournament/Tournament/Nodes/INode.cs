@@ -17,5 +17,6 @@ namespace Tournament.Nodes
         ITeam GetCompeditor(MatchOutcome position);
         int GetNumberOfCompeditors();
         void Update();
+        void AddFinalist(INode node, MatchOutcome pos);
     }
 }

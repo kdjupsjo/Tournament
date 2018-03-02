@@ -1,4 +1,6 @@
 ﻿using System;
+using Tournament.Team;
+
 namespace Tournament.Nodes
 {
     public class FinalistData
@@ -12,12 +14,12 @@ namespace Tournament.Nodes
             FinalistDataPosition = MatchOutcome.OneVsOneWinner;
         }
 
-        public FinalistData( INode node, MatchOutcome position )
+        public FinalistData(INode node, MatchOutcome position)
         {
             SetFinilist(node, position);
         }
 
-        public void SetFinilist( INode node, MatchOutcome position )
+        public void SetFinilist(INode node, MatchOutcome position)
         {
             FinalistDataNode = node;
             FinalistDataPosition = position;
@@ -32,5 +34,13 @@ namespace Tournament.Nodes
         {
             return FinalistDataPosition;
         }
+
+        public ITeam GetCompeditor()
+        {
+            ITeam team = FinalistDataNode.GetCompeditor(FinalistDataPosition);
+
+            return team;
+        }
     }
+
 }

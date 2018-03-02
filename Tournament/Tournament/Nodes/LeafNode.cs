@@ -17,6 +17,11 @@ namespace Tournament.Nodes
             LeafNodeTeam = team;
         }
 
+        public void AddFinalist(INode node, MatchOutcome pos)
+        {
+            
+        }
+
         public ITeam GetCompeditor(MatchOutcome position)
         {
             return LeafNodeTeam;
@@ -24,7 +29,7 @@ namespace Tournament.Nodes
 
         public int GetNumberOfCompeditors()
         {
-            throw new NotImplementedException();
+            return 1;
         }
 
         public bool IsGameFinnished()

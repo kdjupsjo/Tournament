@@ -125,10 +125,8 @@ namespace Tournament.Nodes
 
 
                 FinalistData finalist = MatchNodeFinalists[i];
-                INode node = finalist.GetNode();
-                MatchOutcome position = finalist.GetPosition();
 
-                ITeam compeditor = node.GetCompeditor(position);
+                ITeam compeditor = finalist.GetCompeditor();
 
 
                 if (!compeditor.Equals(DummyTeamCreator.DummyTeamInstance))
