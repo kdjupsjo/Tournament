@@ -59,10 +59,6 @@ namespace Tournament
             tournamentSecondPlace.AddFinalist(final, MatchOutcome.OneVsOneLooser);
             tournamentThirdPlace.AddFinalist(mn, MatchOutcome.OneVsOneLooser);
 
-            tournamentFirstPlace.Update();
-            tournamentSecondPlace.Update();
-            tournamentThirdPlace.Update();
-
             final.GiveTeamOnePoint(winner);
             final.GiveTeamOnePoint(winner);
 

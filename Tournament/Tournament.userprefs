@@ -1,17 +1,5 @@
 ﻿<Properties StartupConfiguration="{AF0646CE-73FE-463A-AACF-31BBB04FE11A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Tournament/OutComponents/Tournament.cs">
-    <Files>
-      <File FileName="Tournament/Program.cs" Line="72" Column="9" />
-      <File FileName="Tournament/Nodes/FinalistData.cs" Line="41" Column="13" />
-      <File FileName="Tournament/Nodes/EndNode.cs" Line="40" Column="47" />
-      <File FileName="Tournament/Nodes/LeafNode.cs" Line="25" Column="15" />
-      <File FileName="Tournament/Nodes/INode.cs" Line="17" Column="15" />
-      <File FileName="Tournament/Nodes/MatchNode.cs" Line="130" Column="17" />
-      <File FileName="Tournament/Rule/BestOf.cs" Line="32" Column="17" />
-      <File FileName="Tournament/OutComponents/Team.cs" Line="11" Column="10" />
-      <File FileName="Tournament/OutComponents/Tournament.cs" Line="10" Column="10" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
