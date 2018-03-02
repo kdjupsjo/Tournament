@@ -40,5 +40,6 @@ namespace Tournament.Nodes
         /// <param name="node">Node to add reference to</param>
         /// <param name="pos">"Position" of the node/match</param>
         void AddFinalist(INode node, MatchOutcome pos);
+        bool IsGameActive();
     }
 }

@@ -12,7 +12,9 @@ namespace Tournament
         {
 
             List<ITeam> teams = GenerateListOfTeam();
+
             List<LeafNode> nodes = GenerateListOfNodes(teams);
+
             TestMultiFinalist(nodes);
 
 
