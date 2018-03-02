@@ -9,14 +9,14 @@
 /Users/johanneserikssonwallin/Documents/Git Reps/Tournaments/Tournament/Tournament/Tournament/bin/Debug/netcoreapp2.0/Tournament.pdb
 /Users/johanneserikssonwallin/Documents/Git Reps/Tournaments/Tournament/Tournament/Tournament/obj/Debug/netcoreapp2.0/Tournament.dll
 /Users/johanneserikssonwallin/Documents/Git Reps/Tournaments/Tournament/Tournament/Tournament/obj/Debug/netcoreapp2.0/Tournament.pdb
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\bin\Debug\netcoreapp2.0\Tournament.deps.json
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\bin\Debug\netcoreapp2.0\Tournament.runtimeconfig.json
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\bin\Debug\netcoreapp2.0\Tournament.runtimeconfig.dev.json
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\bin\Debug\netcoreapp2.0\Tournament.dll
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\bin\Debug\netcoreapp2.0\Tournament.pdb
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\obj\Debug\netcoreapp2.0\Tournament.csprojResolveAssemblyReference.cache
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\obj\Debug\netcoreapp2.0\Tournament.csproj.CoreCompileInputs.cache
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\obj\Debug\netcoreapp2.0\Tournament.AssemblyInfoInputs.cache
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\obj\Debug\netcoreapp2.0\Tournament.AssemblyInfo.cs
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\obj\Debug\netcoreapp2.0\Tournament.dll
-C:\Users\KristofferDjupsjö\Documents\Tournaments\Tournament\Tournament\Tournament\obj\Debug\netcoreapp2.0\Tournament.pdb
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/bin/Debug/netcoreapp2.0/Tournament.deps.json
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/bin/Debug/netcoreapp2.0/Tournament.runtimeconfig.json
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/bin/Debug/netcoreapp2.0/Tournament.runtimeconfig.dev.json
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/bin/Debug/netcoreapp2.0/Tournament.dll
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/bin/Debug/netcoreapp2.0/Tournament.pdb
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/obj/Debug/netcoreapp2.0/Tournament.csprojResolveAssemblyReference.cache
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/obj/Debug/netcoreapp2.0/Tournament.csproj.CoreCompileInputs.cache
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/obj/Debug/netcoreapp2.0/Tournament.AssemblyInfoInputs.cache
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/obj/Debug/netcoreapp2.0/Tournament.AssemblyInfo.cs
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/obj/Debug/netcoreapp2.0/Tournament.dll
+C:/Users/KristofferDjupsjö/Documents/Tournaments/Tournament/Tournament/Tournament/obj/Debug/netcoreapp2.0/Tournament.pdb

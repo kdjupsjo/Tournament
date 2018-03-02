@@ -28,6 +28,11 @@ namespace Tournament.Nodes
             return 1;
         }
 
+        public bool IsGameActive()
+        {
+            return false;
+        }
+
         public bool IsGameFinnished()
         {
             return EndNodeTeam != DummyTeamCreator.DummyTeamInstance;

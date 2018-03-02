@@ -18,5 +18,6 @@ namespace Tournament.Nodes
         int GetNumberOfCompeditors();
         void Update();
         void AddFinalist(INode node, MatchOutcome pos);
+        bool IsGameActive();
     }
 }

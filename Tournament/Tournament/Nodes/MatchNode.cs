@@ -44,6 +44,7 @@ namespace Tournament.Nodes
         public List<CompetitorData> GetBattleResult()
         {
             return MatchNodeBattleResult;
+
         }
 
         public void SetRule(IRule rule)
@@ -77,7 +78,7 @@ namespace Tournament.Nodes
 
         public bool IsGameFinnished()
         {
-            throw new NotImplementedException();
+            return MatchNodeRule.IsGameOver(this);
         }
 
         public void Update()
@@ -138,6 +139,11 @@ namespace Tournament.Nodes
                     }
                 }
             }
+        }
+
+        public bool IsGameActive()
+        {
+            return MatchNodeRule.CanGameRun(this);
         }
     }
 }
