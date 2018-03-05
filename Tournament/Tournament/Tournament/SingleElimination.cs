@@ -46,7 +46,25 @@ namespace Tournament.Tournament
             if (SingleEliminationTeamEntryPoints.Count >= 4)
             {
                 EndNode ThirdPlace = new EndNode();
-                //TODO Get 
+                EndNode FourthPlace = new EndNode();
+
+                List<FinalistData> finalistData = SingleEliminationFinal.GetFinalists();
+
+                if (finalistData.Count > 1)
+                {
+                    MatchNode thirdPlaceFianl = new MatchNode();
+                    thirdPlaceFianl.AddFinalist(
+                        finalistData[0].GetNode(),
+                        MatchOutcome.OneVsOneLooser);
+                    thirdPlaceFianl.AddFinalist(
+                        finalistData[1].GetNode(),
+                        MatchOutcome.OneVsOneLooser);
+
+                    ThirdPlace.AddFinalist(thirdPlaceFianl, MatchOutcome.OneVsOneWinner);
+                    FourthPlace.AddFinalist(thirdPlaceFianl, MatchOutcome.OneVsOneLooser);
+                    SingleEliminationPlacements.Add(ThirdPlace);
+                    SingleEliminationPlacements.Add(FourthPlace);
+                }
             }
 
 
