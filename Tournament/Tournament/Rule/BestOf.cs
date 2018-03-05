@@ -9,9 +9,10 @@ namespace Tournament.Rule
     public class BestOf : IRule
     {
         private int BestOfFirstTo;
-        public BestOf( int numberOfGames = 2 )
+        public BestOf( int numberOfGames = 3 )
         {
-            BestOfFirstTo = numberOfGames;
+            
+            BestOfFirstTo = (int)Math.Floor((float)numberOfGames/2.0f);
         }
 
         public bool CanGameRun(INode game)

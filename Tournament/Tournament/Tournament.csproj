@@ -8,5 +8,6 @@
   <ItemGroup>
     <Folder Include="OutComponents\" />
     <Folder Include="Tournament\" />
+    <Folder Include="AdminInterface\" />
   </ItemGroup>
 </Project>

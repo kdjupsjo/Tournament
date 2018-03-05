@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Tournament.Nodes;
+using Tournament.Rule;
 
 namespace Tournament.Tournament
 {
@@ -10,23 +11,29 @@ namespace Tournament.Tournament
         MatchNode SingleEliminationFinal;
         MatchNode SingleEliminationThirdPlaceFinal;
         List<EndNode> SingleEliminationPlacements;
+        IRule SingleEliminationGameRule;
 
         public SingleElimination()
         {
-            SingleEliminationTeamEntryPoints = new List<LeafNode>();
-            SingleEliminationFinal = new MatchNode();
-            SingleEliminationPlacements = new List<EndNode>();
-        }
 
+            SingleEliminationGameRule = new BestOf(3);
+            SingleEliminationTeamEntryPoints = new List<LeafNode>();
+            SingleEliminationFinal = GenerateMatchNode();
+            SingleEliminationPlacements = new List<EndNode>();
+
+        }
         public void AddLeafNode(LeafNode node)
         {
             SingleEliminationTeamEntryPoints.Add(node);
         }
-
+        public void SetRulesForGames(IRule rule)
+        {
+            SingleEliminationGameRule = rule;
+        }
         public void GenerateTournamentTree()
         {
-            SingleEliminationFinal = new MatchNode();
-            SingleEliminationThirdPlaceFinal = new MatchNode();
+            SingleEliminationFinal = GenerateMatchNode();
+            SingleEliminationThirdPlaceFinal = GenerateMatchNode();
 
             ConnectLeafNodesToMatch(SingleEliminationFinal);
 
@@ -52,7 +59,7 @@ namespace Tournament.Tournament
 
                 if (finalistData.Count > 1)
                 {
-                    MatchNode thirdPlaceFianl = new MatchNode();
+                    MatchNode thirdPlaceFianl = GenerateMatchNode();
                     thirdPlaceFianl.AddFinalist(
                         finalistData[0].GetNode(),
                         MatchOutcome.OneVsOneLooser);
@@ -71,8 +78,6 @@ namespace Tournament.Tournament
 
 
         }
-
-
         public List<INode> GetActiveTournamnetNodes()
         {
             List<INode> activeNodes = new List<INode>();
@@ -107,7 +112,7 @@ namespace Tournament.Tournament
                 FinalistData second = GetShallowNode();
                 SingleEliminationFinal.RemoveFinalist(second);
 
-                MatchNode newMatch = new MatchNode();
+                MatchNode newMatch = GenerateMatchNode();
                 newMatch.AddFinalist(first);
                 newMatch.AddFinalist(second);
 
@@ -119,7 +124,10 @@ namespace Tournament.Tournament
 
             return canMerge;
         }
-
+        private MatchNode GenerateMatchNode()
+        {
+            return new MatchNode(SingleEliminationGameRule);
+        }
         private FinalistData GetShallowNode()
         {
             FinalistData node = null;
@@ -139,13 +147,17 @@ namespace Tournament.Tournament
 
             return node;
         }
-
         private void ConnectLeafNodesToMatch(INode game)
         {
             foreach (INode leaf in SingleEliminationTeamEntryPoints)
             {
                 game.AddFinalist(leaf, MatchOutcome.OneVsOneWinner);
             }
+        }
+
+        public List<LeafNode> GetTournamentLeafNodes()
+        {
+            return SingleEliminationTeamEntryPoints;
         }
     }
 }
