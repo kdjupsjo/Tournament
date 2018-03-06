@@ -2,11 +2,25 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Tournament/AdminInterface/AdminAPI.cs">
     <Files>
       <File FileName="Tournament/Tournament/ITournament.cs" Line="11" Column="49" />
-      <File FileName="Tournament/Program.cs" Line="1" Column="1" />
+      <File FileName="Tournament/Program.cs" Line="28" Column="30" />
       <File FileName="Tournament/Tournament/SingleElimination.cs" Line="160" Column="53" />
       <File FileName="Tournament/Nodes/MatchNode.cs" Line="19" Column="55" />
       <File FileName="Tournament/Rule/BestOf.cs" Line="9" Column="24" />
-      <File FileName="Tournament/AdminInterface/AdminAPI.cs" Line="34" Column="14" />
+      <File FileName="Tournament/AdminInterface/AdminAPI.cs" Line="44" Column="14" />
+      <File FileName="Tournament/Team/DummyTeam.cs" Line="1" Column="1" />
+      <File FileName="Tournament/Team/ITeam.cs" Line="1" Column="1" />
+      <File FileName="Tournament/Team/Competitor.cs" Line="1" Column="1" />
+      <File FileName="Tournament/Rule/IRule.cs" Line="1" Column="1" />
+      <File FileName="Tournament/Rule/DummyRule.cs" Line="1" Column="1" />
+      <File FileName="Tournament/OutComponents/Match.cs" Line="1" Column="1" />
+      <File FileName="Tournament/OutComponents/Player.cs" Line="1" Column="1" />
+      <File FileName="Tournament/OutComponents/Team.cs" Line="1" Column="1" />
+      <File FileName="Tournament/OutComponents/Tournament.cs" Line="1" Column="1" />
+      <File FileName="Tournament/Nodes/CompetitorData.cs" Line="1" Column="1" />
+      <File FileName="Tournament/Nodes/EndNode.cs" Line="1" Column="1" />
+      <File FileName="Tournament/Nodes/INode.cs" Line="1" Column="1" />
+      <File FileName="Tournament/Nodes/FinalistData.cs" Line="1" Column="1" />
+      <File FileName="Tournament/Nodes/LeafNode.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

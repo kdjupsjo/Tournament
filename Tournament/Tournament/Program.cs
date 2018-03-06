@@ -18,7 +18,6 @@ namespace Tournament
 
             TestMultiFinalist(nodes);
 
-
             SingleElimination tournament = new SingleElimination();
 
             foreach( LeafNode n in nodes)
