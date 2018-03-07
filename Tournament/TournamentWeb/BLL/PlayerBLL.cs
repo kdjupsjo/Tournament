@@ -8,8 +8,14 @@ namespace TournamentWeb.BLL
 {
     public class PlayerBLL
     {
-        //TODO - Add Validate password
+        public List<Player> players; 
 
+        public PlayerBLL()
+        {
+            players = new List<Player>();
+        }
+        
+        //TODO - Add Validate password
         public bool CreatePlayer(string userName, string password, string email)
         {
             var player = new Player
@@ -19,10 +25,15 @@ namespace TournamentWeb.BLL
                 PlayerPass = password
             };
 
-
+            players.Add(player);
 
             return false; 
-        } 
+        }
+        
+        public List<Player> getPlayerList()
+        {
+            return players;
+        }
 
 
     }

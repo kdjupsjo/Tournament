@@ -162,11 +162,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BLL\PlayerBLL.cs" />
+    <Compile Include="BLL\TournamentBLL.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\TournamentController.cs" />
     <Compile Include="DAL\DBContext\TournamentContext.cs" />
+    <Compile Include="DAL\TournamentMockUp.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

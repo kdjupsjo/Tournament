@@ -3,5 +3,37 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Tournament</h2>
 
+<div class="row">
+
+
+
+    <div class="col-lg-4" style="border-style:dashed; padding:20px">
+
+        <form action="Tournament/AddNode" method="post">
+
+            <p>Team name: <input type="text" name="teamname" placeholder="Add team name" /> </p>
+            <input class="btn btn-primary" type="submit" value="Add Leaf Node" />
+
+        </form>
+
+        
+        </div>
+
+        <div class="col-lg-4" >
+
+            <form action="Tournament/Edit" method="post" style="padding:5px">
+
+                <input class="btn btn-warning" type="submit" value="Edit Existing Tournament" />
+
+            </form>
+
+            <form action="Tournament/Generate" method="post" style="padding:5px">
+
+                <input class="btn btn-success" type="submit" value="Generate New Tournament" />
+
+            </form>
+    </div>
+
+</div>
